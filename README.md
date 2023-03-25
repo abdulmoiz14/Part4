@@ -108,11 +108,16 @@ docker rm httpd_container
 ```
 **Output**<br />
 ![Screenshot (70)](https://user-images.githubusercontent.com/65711565/227741657-cc9b34cc-9a95-4cbd-82cf-e138578ebd40.png)
-**Cleanup: Remove the "my_network" network. **
+**Cleanup: Remove the "my_network" network.**
 ```
-
+docker network rm my_netwokr
+```
+**Use command to list all networks.**
+```
+docker network ls
 ```
 **Output**<br />
+![Screenshot (72)](https://user-images.githubusercontent.com/65711565/227742266-0a796be8-3898-4811-b792-de776d3473db.png)
 
 **Create README.md file and describe your findings in markdown language.**
 ```
