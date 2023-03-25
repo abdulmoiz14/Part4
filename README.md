@@ -83,6 +83,13 @@ docker network inspect my_network
 ```
 **Output**<br />
 ![Screenshot (69)](https://user-images.githubusercontent.com/65711565/227741302-1907fbb7-161d-4d25-84b3-d75d1c8a4475.png)
+## Use the "docker container ls" command to display information about all running containers.
+```
+docker container ls
+```
+**Output**<br />
+![Screenshot (71)](https://user-images.githubusercontent.com/65711565/227741943-373137ae-921c-43d0-829f-7e3b5302853c.png)
+
 ## Stopping and removing the all containers.
 **first disconnect all containers from my_network.**
 ```
@@ -101,3 +108,25 @@ docker rm httpd_container
 ```
 **Output**<br />
 ![Screenshot (70)](https://user-images.githubusercontent.com/65711565/227741657-cc9b34cc-9a95-4cbd-82cf-e138578ebd40.png)
+**Cleanup: Remove the "my_network" network. **
+```
+
+```
+**Output**<br />
+
+**Create README.md file and describe your findings in markdown language.**
+```
+touch README.md
+nano README.md
+```
+**Create git repo and clone it to local file.**
+```
+git clone https://github.com/abdulmoiz14/Part4.git
+```
+**copy to README file to Part4 folder and push it to the github.**
+```
+cp README.md /Part4
+git add --all
+git commit -m "adding codebase to the github"
+git push -u origin main
+```
