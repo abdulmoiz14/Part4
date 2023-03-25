@@ -128,7 +128,7 @@ nano README.md
 ```
 git clone https://github.com/abdulmoiz14/Part4.git
 ```
-**copy to README file to Part4 folder and push it to the github.**
+**copy README file to Part4 folder and push it to the github.**
 ```
 cp README.md /Part4
 git add --all
