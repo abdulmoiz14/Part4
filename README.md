@@ -46,30 +46,31 @@ docker network inspect my_network
 ```
 **Output**<br />
 ![Screenshot (62)](https://user-images.githubusercontent.com/65711565/227739912-608b7bb7-3fa7-4811-b066-6901a7446d43.png)
-### Stopping and removing the httpd_contaianer.
-**first disconnect httpd_container from my_network.**
+### Stopping and removing the nginx_contaianer.
+**first disconnect nginx_container from my_network.**
 ```
-docker network disconnect  my_network httpd_container
+docker network disconnect  my_network nginx_container
 ```
-**Now stop the running httpd_container**
+**Now stop the running nginx_container**
 ```
-docker stop httpd_container
+docker stop nginx_container
 ```
-**Remove the httpd_container.**
+**Remove the nginx_container.**
 ```
-docker rm httpd_container
+docker rm nginx_container
 ```
 **Output**<br />
-![Screenshot (66)](https://user-images.githubusercontent.com/65711565/227740685-d0b851e1-fa86-4970-a175-409a2013edbd.png)
-## Httpd
+![Screenshot (67)](https://user-images.githubusercontent.com/65711565/227741166-d617af7d-c53c-4ae0-9d30-aa19ff070023.png)
+
+## nginx_container_2
 **Creating a new Docker container using the "httpd" image and connect it to the "my_network" network. Name the container "nginx_container_2".**
 ```
-docker run -it -d --name nginx_container_2 -p 8082:80 --network my_network httpd
+docker run -it -d --name nginx_container_2 -p 8082:80 --network my_network nginx
 ```
 **Output**<br />
 
 
-**Verify that the "httpd" default page is accessible on your host machine using this IP.**
+**Verify that the "nginx" default page is accessible on your host machine using this IP.**
 ```
 http://localhost:8082
 ```
