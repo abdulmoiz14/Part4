@@ -51,7 +51,7 @@ docker network inspect my_network
 ```
 docker network disconnect  my_network nginx_container
 ```
-**Now stop the running nginx_container**
+**Now stop the running nginx_container.**
 ```
 docker stop nginx_container
 ```
@@ -68,17 +68,36 @@ docker rm nginx_container
 docker run -it -d --name nginx_container_2 -p 8082:80 --network my_network nginx
 ```
 **Output**<br />
-
+b2ffcbc0db3308fc7f9a7e8668315b9bfcfbf9d532d94c455318d80b0673eb43
 
 **Verify that the "nginx" default page is accessible on your host machine using this IP.**
 ```
 http://localhost:8082
 ```
 **Output**<br />
+![Screenshot (68)](https://user-images.githubusercontent.com/65711565/227741288-fee440d0-0ab5-4666-9772-38b56d3b0acf.png)
 
 **use this command to display information about the "my_network" network.**
 ```
 docker network inspect my_network
 ```
 **Output**<br />
-
+![Screenshot (69)](https://user-images.githubusercontent.com/65711565/227741302-1907fbb7-161d-4d25-84b3-d75d1c8a4475.png)
+## Stopping and removing the all containers.
+**first disconnect all containers from my_network.**
+```
+docker network disconnect  my_network nginx_container_2
+docker network disconnect  my_network httpd_container
+```
+**Now stop the running all containers.**
+```
+docker stop nginx_container_2
+docker stop httpd_container
+```
+**Remove the all containers.**
+```
+docker rm nginx_container_2
+docker rm httpd_container
+```
+**Output**<br />
+![Screenshot (70)](https://user-images.githubusercontent.com/65711565/227741657-cc9b34cc-9a95-4cbd-82cf-e138578ebd40.png)
