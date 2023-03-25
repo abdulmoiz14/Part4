@@ -49,7 +49,7 @@ docker network inspect my_network
 ### Stopping and removing the httpd_contaianer.
 **first disconnect httpd_container from my_network.**
 ```
-docker network disconnect httpd_container my_network
+docker network disconnect  my_network httpd_container
 ```
 **Now stop the running httpd_container**
 ```
@@ -60,3 +60,24 @@ docker stop httpd_container
 docker rm httpd_container
 ```
 **Output**<br />
+![Screenshot (66)](https://user-images.githubusercontent.com/65711565/227740685-d0b851e1-fa86-4970-a175-409a2013edbd.png)
+## Httpd
+**Creating a new Docker container using the "httpd" image and connect it to the "my_network" network. Name the container "nginx_container_2".**
+```
+docker run -it -d --name nginx_container_2 -p 8082:80 --network my_network httpd
+```
+**Output**<br />
+
+
+**Verify that the "httpd" default page is accessible on your host machine using this IP.**
+```
+http://localhost:8082
+```
+**Output**<br />
+
+**use this command to display information about the "my_network" network.**
+```
+docker network inspect my_network
+```
+**Output**<br />
+
